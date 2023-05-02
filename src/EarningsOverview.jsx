@@ -5,6 +5,7 @@ export default function EarningsOverview() {
         <h6 className="m-0 font-weight-bold text-primary">Earnings Overview</h6>
         <div className="dropdown no-arrow">
           <a
+            href="/"
             className="dropdown-toggle"
             role="button"
             id="dropdownMenuLink"
@@ -19,10 +20,16 @@ export default function EarningsOverview() {
             aria-labelledby="dropdownMenuLink"
           >
             <div className="dropdown-header">Dropdown Header:</div>
-            <a className="dropdown-item">Action</a>
-            <a className="dropdown-item">Another action</a>
+            <a href="/" className="dropdown-item">
+              Action
+            </a>
+            <a href="/" className="dropdown-item">
+              Another action
+            </a>
             <div className="dropdown-divider"></div>
-            <a className="dropdown-item">Something else here</a>
+            <a href="/" className="dropdown-item">
+              Something else here
+            </a>
           </div>
         </div>
       </div>

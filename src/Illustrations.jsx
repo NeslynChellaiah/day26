@@ -15,13 +15,13 @@ export default function Illustrations() {
         </div>
         <p>
           Add some quality, svg illustrations to your project courtesy of{" "}
-          <a target="_blank" rel="nofollow" href="https://undraw.co/">
+          <a href="/" target="_blank" rel="nofollow">
             unDraw
           </a>
           , a constantly updated collection of beautiful svg images that you can
           use completely free and without attribution!
         </p>
-        <a target="_blank" rel="nofollow" href="https://undraw.co/">
+        <a href="/" target="_blank" rel="nofollow">
           Browse Illustrations on unDraw &rarr;
         </a>
       </div>
