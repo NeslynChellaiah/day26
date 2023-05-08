@@ -20,7 +20,7 @@ export default function Teachers() {
         },
       }
     );
-    setTeachers(teachers.filter((t) => t.id != teacher.id));
+    setTeachers(teachers.filter((t) => t.id !== teacher.id));
   };
 
   return (

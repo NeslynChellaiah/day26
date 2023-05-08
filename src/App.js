@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./App.css";
 import Sidenav from "./Sidenav";
 import Dashboard from "./Dashboard";

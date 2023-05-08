@@ -20,7 +20,7 @@ export default function Students() {
         },
       }
     );
-    setStudents(students.filter((t) => t.id != student.id));
+    setStudents(students.filter((t) => t.id !== student.id));
   };
 
   return (
