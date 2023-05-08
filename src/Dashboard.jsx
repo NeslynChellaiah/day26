@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Approach from "./Approach";
 import Colors from "./Colors";
 import DetailsRow from "./DetailsRow";
@@ -8,46 +9,50 @@ import LogoutModal from "./LogoutModal";
 import PieChart from "./PieChart";
 import Projects from "./Projects";
 import Topbar from "./Topbar";
+import { useState } from "react";
+import Teachers from "./Teachers";
+import Students from "./Students";
+import AddTeacher from "./AddTeacher";
+import AddStudent from "./AddStudent";
 
 export default function Dashboard() {
   return (
     <div id="content-wrapper" className="d-flex flex-column">
       <div id="content">
-        <Topbar />
-        <LogoutModal />
         <div className="container-fluid">
-          <div className="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a
-              href="/"
-              className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-            >
-              <i className="fas fa-download fa-sm text-white-50"></i> Generate
-              Report
-            </a>
-          </div>
-
-          <DetailsRow />
-          <div className="row">
-            <div className="col-xl-8 col-lg-7">
-              <EarningsOverview />
-            </div>
-            <div className="col-xl-4 col-lg-5">
-              <PieChart />
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-lg-6 mb-4">
-              <Projects />
-              <Colors />
-            </div>
-
-            <div className="col-lg-6 mb-4">
-              <Illustrations />
-              <Approach />
-            </div>
-          </div>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="row">
+                  <div className="col-md-7">
+                    <Teachers />
+                  </div>
+                  <div className="col-md-5">
+                    <Students />
+                  </div>
+                </div>
+              }
+            ></Route>
+            <Route path="/teachers" element={<Teachers />}></Route>
+            <Route
+              path="edit/teacher/:id"
+              element={<AddTeacher editMode={true} />}
+            ></Route>
+            <Route
+              path="add/teacher"
+              element={<AddTeacher editMode={false} />}
+            ></Route>
+            <Route path="/students" element={<Students />}></Route>
+            <Route
+              path="edit/student/:id"
+              element={<AddStudent editMode={true} />}
+            ></Route>
+            <Route
+              path="add/student"
+              element={<AddStudent editMode={false} />}
+            ></Route>
+          </Routes>
         </div>
       </div>
       <Footer />
