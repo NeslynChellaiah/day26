@@ -1,15 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Approach from "./Approach";
-import Colors from "./Colors";
-import DetailsRow from "./DetailsRow";
-import EarningsOverview from "./EarningsOverview";
 import Footer from "./Footer";
-import Illustrations from "./Illustrations";
-import LogoutModal from "./LogoutModal";
-import PieChart from "./PieChart";
-import Projects from "./Projects";
-import Topbar from "./Topbar";
-import { useState } from "react";
 import Teachers from "./Teachers";
 import Students from "./Students";
 import AddTeacher from "./AddTeacher";
